@@ -10,7 +10,7 @@ class Front(models.Model):
 class Sub_category(models.Model):
     name = models.CharField(max_length=200)
     price = models.IntegerField()
-    img = models.ImageField(upload_to='pics',default=None)
+    img = models.ImageField(upload_to='pics',default=None )
 
     def __str__(self):
         return self.name
@@ -21,6 +21,7 @@ class Product(models.Model):
     name = models.CharField(max_length=200)
     price = models.IntegerField()
     img = models.ImageField(upload_to='pics',default=None)
+    desc = models.CharField(max_length=200, default=None)
     def __str__(self):
         return self.name
 
